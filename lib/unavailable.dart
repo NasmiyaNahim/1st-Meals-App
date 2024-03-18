@@ -33,7 +33,7 @@ class Unavailable extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment:
-              MainAxisAlignment.center, // Align items in the center vertically
+              MainAxisAlignment.center, 
           children: [
             Text(
               'Sorry..!',
@@ -47,7 +47,7 @@ class Unavailable extends StatelessWidget {
               ),
             ),
             SizedBox(
-                height: 20), // Add some space between 'Sorry' and the next text
+                height: 20), 
             SizedBox(
               width: 333,
               child: Text(

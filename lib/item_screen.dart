@@ -101,7 +101,7 @@ class ItemDetails extends StatelessWidget {
             ),
             const SizedBox(height: 0.20),
             const Padding(
-              padding: EdgeInsets.only(left: 26), // Adjust left padding
+              padding: EdgeInsets.only(left: 26), 
               child: Text(
                 "100% Non-Veg",
                 style: TextStyle(
@@ -112,7 +112,7 @@ class ItemDetails extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 5), // Adjust the height here
+            const SizedBox(height: 5), 
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 26),
               child: Column(
@@ -187,7 +187,7 @@ class ItemDetails extends StatelessWidget {
                             const VerticalDivider(
                               color: Colors.white,
                               thickness: 1,
-                              width: 10, // Reduced width
+                              width: 10, 
                             ),
                             const Text(
                               '3',
@@ -200,11 +200,11 @@ class ItemDetails extends StatelessWidget {
                             const VerticalDivider(
                               color: Colors.white,
                               thickness: 1,
-                              width: 10, // Reduced width
+                              width: 10, 
                             ),
                             InkWell(
                               onTap: () {
-                                // Handle plus button tap
+                                
                               },
                               child: const Icon(
                                 Icons.add,

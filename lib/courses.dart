@@ -156,7 +156,7 @@ class Courses extends StatelessWidget {
             }),
 
             SizedBox(height: 16),
-            // Add more containers with different images here
+            
           ],
         ),
       ),

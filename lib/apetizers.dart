@@ -234,7 +234,7 @@ class Apetizers extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Image.asset(
-                  'assets/images/Rectangle 8.png', // Placeholder for the image path
+                  'assets/images/Rectangle 8.png', 
                   fit: BoxFit.fill,
                 ),
               ),

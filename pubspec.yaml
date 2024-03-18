@@ -67,6 +67,14 @@ flutter:
     - assets/images/image 1.png
     - assets/images/Less Than.png
     - assets/images/Rectangle 8.png
+    - assets/images/curry.png
+    - assets/images/bread.png
+    - assets/images/rice.png
+    - assets/images/salad.png
+    - assets/images/mixeditem.png
+    - assets/images/Rectangle 16.png
+    - assets/images/Rectangle 17.png
+    - assets/images/Frame 17.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

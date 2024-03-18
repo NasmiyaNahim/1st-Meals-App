@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mealsapp/account_screen.dart';
 import 'package:mealsapp/courses.dart';
+import 'package:mealsapp/home.dart';
+import 'package:mealsapp/unavailable.dart';
 
 class Menu extends StatelessWidget {
   const Menu({super.key});
@@ -12,6 +15,14 @@ class Menu extends StatelessWidget {
         backgroundColor: const Color(0xFF817400),
         actions: [
           ClipOval(
+
+            child:GestureDetector(
+              onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AccountScreen()),
+            );
+          },
             child: SizedBox(
               width: 40,
               height: 40,
@@ -20,11 +31,24 @@ class Menu extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-          ),
+          ),),
         ],
-        leading: IconButton(
-          icon: Image.asset('assets/images/Less Than.png'),
-          onPressed: () {},
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Home()),
+            );
+          },
+          child: IconButton(
+            icon: Image.asset('assets/images/Less Than.png'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Home()),
+              );
+            },
+          ),
         ),
       ),
       backgroundColor: const Color.fromARGB(255, 213, 213, 205),
@@ -56,8 +80,9 @@ class Menu extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Courses()),
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Courses()),
                   );
                 },
                 child: Container(
@@ -70,7 +95,6 @@ class Menu extends StatelessWidget {
                   ),
                   child: Stack(
                     children: [
-                      
                       Center(
                         child: Image.asset(
                           'assets/images/Rectangle 8.png',
@@ -88,14 +112,14 @@ class Menu extends StatelessWidget {
                           color: Colors.white,
                           child: const Align(
                             alignment: Alignment.center,
-                          child: const Text(
-                            'Non-Veg',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
+                            child: const Text(
+                              'Non-Veg',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
                           ),
                         ),
                       ),
@@ -132,16 +156,16 @@ class Menu extends StatelessWidget {
                           color: Colors.white,
                           child: const Align(
                             alignment: Alignment.center,
-                          child: const Text(
-                            'Veg',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
+                            child: const Text(
+                              'Veg',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ),
-                      ),
                       )
                     ],
                   ),
@@ -201,6 +225,10 @@ class Menu extends StatelessWidget {
           SizedBox(height: 150),
           SizedBox(
             height: 50,
+            child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const Unavailable()));
+                      },
             child: Container(
               width: 320,
               height: 50,
@@ -211,6 +239,7 @@ class Menu extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
+              
               child: const Center(
                 child: Text(
                   'Customize Menu',
@@ -225,7 +254,7 @@ class Menu extends StatelessWidget {
                 ),
               ),
             ),
-          ),
+          ),),
           const SizedBox(height: 80),
           Column(
             children: [

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mealsapp/account_screen.dart';
+import 'package:mealsapp/kart_screen.dart';
 import 'package:mealsapp/menu.dart';
+import 'package:mealsapp/unavailable.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -12,6 +15,15 @@ class Home extends StatelessWidget {
         backgroundColor: const Color(0xFF817400),
         actions: [
           ClipOval(
+            child:GestureDetector(
+              onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AccountScreen()),
+            );
+          },
+
+            
             child: SizedBox(
               width: 40,
               height: 40,
@@ -20,11 +32,16 @@ class Home extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-          ),
+          ),),
         ],
         leading: IconButton(
           icon: const Icon(Icons.shopping_cart),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => KartPage()),
+            );
+          },
         ),
       ),
       backgroundColor: const Color.fromARGB(255, 213, 213, 205),
@@ -50,42 +67,50 @@ class Home extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            margin: const EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 8.0,
-            ),
-            padding: const EdgeInsets.all(
-              2.0,
-            ),
-            width: 310,
-            height: 36,
-            decoration: ShapeDecoration(
-              color: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Unavailable()),
+              );
+            },
+            child: Container(
+              margin: const EdgeInsets.symmetric(
+                horizontal: 16.0,
+                vertical: 8.0,
               ),
-            ),
-            child: Row(
-              children: [
-                Image.asset(
-                  'assets/images/Search.png',
-                  width: 24,
-                  height: 24,
+              padding: const EdgeInsets.all(
+                2.0,
+              ),
+              width: 310,
+              height: 36,
+              decoration: ShapeDecoration(
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
                 ),
-                const SizedBox(
-                  width: 8,
-                ),
-                Text(
-                  'Search for your location !',
-                  style: TextStyle(
-                    color: Colors.black.withOpacity(0.5),
-                    fontSize: 15,
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.w600,
+              ),
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/images/Search.png',
+                    width: 24,
+                    height: 24,
                   ),
-                ),
-              ],
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  Text(
+                    'Search for your location !',
+                    style: TextStyle(
+                      color: Colors.black.withOpacity(0.5),
+                      fontSize: 15,
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           const SizedBox(height: 40),
@@ -145,13 +170,14 @@ class Home extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Menu()),
-                );
-              },
-              child: Image.asset('assets/images/image 1.png')),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Menu()),
+                          );
+                        },
+                        child: Image.asset('assets/images/image 1.png')),
                     const Text(
                       'Thalassery',
                       textAlign: TextAlign.center,
@@ -187,13 +213,14 @@ class Home extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Menu()),
-                );
-              },
-              child: Image.asset('assets/images/image 1.png')),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Menu()),
+                          );
+                        },
+                        child: Image.asset('assets/images/image 1.png')),
                     const Text(
                       'Payyanur',
                       textAlign: TextAlign.center,
@@ -223,13 +250,14 @@ class Home extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Menu()),
-                );
-              },
-              child: Image.asset('assets/images/image 1.png')),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Menu()),
+                          );
+                        },
+                        child: Image.asset('assets/images/image 1.png')),
                     const Text(
                       'Thaliparamba',
                       textAlign: TextAlign.center,
@@ -266,13 +294,14 @@ class Home extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Menu()),
-                );
-              },
-              child: Image.asset('assets/images/image 1.png')),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Menu()),
+                          );
+                        },
+                        child: Image.asset('assets/images/image 1.png')),
                     const Text(
                       'Koothuparamba',
                       textAlign: TextAlign.center,
@@ -302,13 +331,14 @@ class Home extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Menu()),
-                );
-              },
-              child: Image.asset('assets/images/image 1.png')),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Menu()),
+                          );
+                        },
+                        child: Image.asset('assets/images/image 1.png')),
                     const Text(
                       'Eranholi',
                       textAlign: TextAlign.center,
